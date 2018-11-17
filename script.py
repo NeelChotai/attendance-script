@@ -9,7 +9,7 @@ def scan(room, min, max):
         s.settimeout(2)
         if pc < 10:
             pc = str(0) + str(pc)
-        host = "".join("cse", room, "pc-", str(pc), ".cs.york.ac.uk")
+        host = "".join(["cse", room, "pc-", str(pc), ".cs.york.ac.uk"])
         if s.connect_ex((host, 22)) == 0:
             print(host)
             return
