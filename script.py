@@ -2,6 +2,7 @@ import socket
 
 num = input("1) 069\n2) 070\n3) 168\n4) 169 \n5) 270\nPlease select a number > ")
 
+
 def scan(room, min, max):
     for pc in range(min, max):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -15,6 +16,7 @@ def scan(room, min, max):
             return
         s.close()
 
+
 if num == "1":
     scan("069", 1, 56)
 elif num == "2":
@@ -25,5 +27,3 @@ elif num == 4:
     scan("169", 38, 85)
 elif num == 5:
     scan("270", 1, 80)
-
-
