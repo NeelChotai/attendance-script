@@ -2,5 +2,3 @@
 
 To-do:
 * Subprocess SSH call directly from script.
-* List comprehension concatenation.
-* Socket cleanup.
