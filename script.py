@@ -11,7 +11,9 @@ def scan(room, min, max):
         host = "".join(["cse", room, "pc-", str(pc), ".cs.york.ac.uk"])
         if s.connect_ex((host, 22)) == 0:
             print(host)
+            s.close()
             return
+        s.close()
 
 if num == "1":
     scan("069", 1, 56)
