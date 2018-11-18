@@ -23,9 +23,9 @@ if num == "1":
     scan("069", 1, 56)
 elif num == "2":
     scan("070", 57, 84)
-elif num == 3:
+elif num == "3":
     scan("168", 1, 37)
-elif num == 4:
+elif num == "4":
     scan("169", 38, 85)
-elif num == 5:
+elif num == "5":
     scan("270", 1, 80)
