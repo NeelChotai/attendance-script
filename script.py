@@ -1,5 +1,4 @@
 import socket
-from contextlib import closing
 
 num = input("1) 069\n2) 070\n3) 168\n4) 169 \n5) 270\nPlease select a number > ")
 
