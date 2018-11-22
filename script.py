@@ -14,7 +14,7 @@ def scan(room, min, max):
         host = "".join(["cse", room, "pc-", str(pc), ".cs.york.ac.uk"])
         if s.connect_ex((host, 22)) == 0:
             s.close()
-            call(["ssh", "".join([username, "@", host])])
+            call(["ssh", "-Y", "".join([username, "@", host])])
             return
         s.close()
 
