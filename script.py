@@ -8,10 +8,8 @@ num = input("1) 069\n2) 070\n3) 168\n4) 169 \n5) 270\nPlease select a number > "
 def scan(room, min, max):
     for pc in range(min, max):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(2)
-        if pc < 10:
-            pc = str(0) + str(pc)
-        host = "".join(["cse", room, "pc-", str(pc), ".cs.york.ac.uk"])
+        s.settimeout(1)
+        host = "".join(["cse", room, "pc-", str(pc).zfill(2), ".cs.york.ac.uk"])
         if s.connect_ex((host, 22)) == 0:
             s.close()
             call(["ssh", "-Y", "".join([username, "@", host])])
