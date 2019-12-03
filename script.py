@@ -1,4 +1,5 @@
 import socket
+import os
 from subprocess import call
 
 username = input("University of York username > ")
@@ -12,7 +13,7 @@ def scan(room, min, max):
         host = "".join(["cse", room, "pc-", str(pc).zfill(2), ".cs.york.ac.uk"])
         if s.connect_ex((host, 22)) == 0:
             s.close()
-            call(["ssh", "-Y", "".join([username, "@", host])])
+            call(["ssh", "-X", "".join([username, "@", host])])
             return
         s.close()
 

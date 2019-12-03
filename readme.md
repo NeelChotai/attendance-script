@@ -1,2 +1,11 @@
 # University of York Attendance
-No longer functional.
+
+Usage:
+
+```
+ssh -X <username>@csteach1.york.ac.uk
+```
+
+Once connection has been established, call the script from the remote machine and you should have access.
+
+Requires Xming and manually setting the DISPLAY variable on Windows.
